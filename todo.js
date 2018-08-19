@@ -8,6 +8,7 @@ ReactDOM.render(heading, document.getElementById('todoHeading'));
 // set to do list
 class ToDoList extends React.Component {
   constructor(props) {
+    super(props);
     this.state.todoItems = ["Grocery shopping", "Clean room"];
     this.state.completedItems = [];
   }
