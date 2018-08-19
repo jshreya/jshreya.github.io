@@ -1,7 +1,7 @@
 'use strict';
 
 // set up for adding new items
-class NewToDo extends React.Component {
+export default class NewToDo extends React.Component {
   render() {
     const addToDo = (
       <div>
@@ -16,4 +16,3 @@ class NewToDo extends React.Component {
     this.props.addToDo(this.refs.newToDoItem.value);
   }
 }
-module.exports = NewToDo;
