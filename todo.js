@@ -15,15 +15,15 @@ class ToDoList extends React.Component {
     };
   }
   render() {
-    const list = getToDoItems();
+    //const list = this.getToDoItems();
+    const list = this.state.todoItems.map((element, index) =>
+      <li key={index}>
+        {element}
+        <input type="button" value="Done!"/>
+        <input type="button" value="Delete"/>
+      </li>
+    );
     return <ul> {list} </ul>;
-  }
-  getToDoItems() {
-    const todoItems = [];
-    this.state.todoItems.forEach(function(element) {
-      todoItems.push(<li>{element}</li>);
-    });
-    return todoItems;
   }
 }
 ReactDOM.render(<ToDoList/>, document.getElementById('todoList'));
