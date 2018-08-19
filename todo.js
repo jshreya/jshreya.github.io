@@ -9,8 +9,10 @@ ReactDOM.render(heading, document.getElementById('todoHeading'));
 class ToDoList extends React.Component {
   constructor(props) {
     super(props);
-    this.state.todoItems = ["Grocery shopping", "Clean room"];
-    this.state.completedItems = [];
+    this.state = {
+        todoItems: ["Grocery shopping", "Clean room"],
+        completedItems: []
+    };
   }
   render() {
     const list = getToDoItems();
