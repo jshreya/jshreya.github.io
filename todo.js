@@ -8,12 +8,12 @@ ReactDOM.render(heading, document.getElementById('todoHeading'));
 
 class ToDoList extends React.Component {
   render() {
-    const list = {
+    const list = (
       <ul>
         <li> Grocery shopping </li>
         <li> Clean room </li>
       </ul>
-    };
+    );
     return list;
   }
 }
