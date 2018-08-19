@@ -19,11 +19,23 @@ class ToDoList extends React.Component {
     const list = this.state.todoItems.map((element, index) =>
       <li key={index}>
         {element}
-        <input type="button" value="Done!"/>
-        <input type="button" value="Delete"/>
+        <input type="button" onClick={this.itemCompleted.bind(this, index)} value="Done!"/>
+        <input type="button" onClick={this.deleteItem.bind(this, index)} value="Delete"/>
       </li>
     );
     return <ul> {list} </ul>;
+  }
+
+  itemCompleted(key) {
+      alert("completed " + this.state.todoItems[key]);
+      this.setState((prevState, props) => {
+        const updatedList = prevState.todoItems.filter((element, index) => index !== key);
+        return {todoItems: updatedList};
+      });
+  }
+  deleteItem(key) {
+    alert("delete " + this.state.todoItems[key]);
+
   }
 }
 ReactDOM.render(<ToDoList/>, document.getElementById('todoList'));
