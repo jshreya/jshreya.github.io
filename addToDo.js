@@ -15,7 +15,9 @@ class NewToDo extends React.Component {
     e.preventDefault();
     e.stopPropagation();
     //alert("Add " + this.refs.newToDoItem.value);
-    this.props.addToDo(this.refs.newToDoItem.value);
-    this.refs.newToDoItem.value="";
+    if(this.refs.newToDoItem.value.length > 0) {
+      this.props.addToDo(this.refs.newToDoItem.value);
+      this.refs.newToDoItem.value="";
+    }
   }
 }
