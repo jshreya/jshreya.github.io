@@ -1,6 +1,6 @@
 'use strict';
 
-import NewToDo from './addToDo.js';
+var NewToDo = require('./addToDo.js');
 
 // class NewToDo extends React.Component {
 //   render() {
