@@ -16,18 +16,40 @@ li {
 	padding-top: 2px;
 	padding-bottom: 2px;
 	padding-left: 10%;
+	padding-right: 10%;
 	border-style: solid;
 	border-color: #ffffff;
 	border-width: 0px;
 	border-bottom-width: 1px;
 	border-bottom-color: #f2f2f2;
+	overflow: auto;
 }
 #todoList {
 	background-color: #ffffff;
 	box-shadow: 2px 2px 2px grey;
-	width: 55%;
 	border-radius: 5px;
 	margin: auto;
+	overflow: auto;
+	font-size: 14px;
+	width: 96vw;
+}
+@media screen and (min-width: 550px) {
+	#todoList {
+			font-size: 14px;
+			width: 72vw;
+	}
+}
+@media screen and (min-width: 700px) {
+	#todoList {
+			font-size: 16px;
+			width: 60vw;
+	}
+}
+@media screen and (min-width: 1200px) {
+	#todoList {
+			font-size: 20px;
+			width: 40vw;
+	}
 }
 #todo {
 	display: inline-block;
@@ -49,8 +71,10 @@ li {
 	display: inline-block;
 	text-align: center;
 	width: 25px;
+	float: right;
 	padding-top: 4px;
 	padding-bottom: 2px;
+	font-size: 16px;
 }
 #done {
 	background-color: green;
@@ -59,6 +83,7 @@ li {
 	background-color: red;
 }
 #add {
+	float: none;
 	margin-left: 5px;
 	background-color: #02527e;
 }

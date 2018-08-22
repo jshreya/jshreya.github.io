@@ -10,13 +10,12 @@ class ToDoList extends React.Component {
   constructor() {
     super();
     this.state = {
-        todoItems: ["Grocery shopping", "Clean room"],
+        todoItems: ["Grocery shopping", "Clean room", "Do laundry and fold clothes"],
         completedItems: []
     };
     this.addItem = this.addItem.bind(this);
   }
   render() {
-    //const list = this.getToDoItems();
     const list = this.state.todoItems.map((element, index) =>
       <li key={index}>
         <span id='todo'>{element}</span>
