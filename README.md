@@ -1,2 +1,2 @@
 # jshreya.github.io
-React to-do application using React, ReactDOM and Babel CDNs.
+A to-do application using React, ReactDOM and Babel -> https://jshreya.github.io/
