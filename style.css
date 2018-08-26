@@ -59,6 +59,7 @@ li {
 }
 #done {
 	background-color: green;
+	margin-right: 5px;
 }
 #delete {
 	background-color: red;
